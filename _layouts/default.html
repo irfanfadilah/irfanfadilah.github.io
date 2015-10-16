@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Irfan Fadilah">
+    <link rel="icon" href="../../favicon.ico">
+    <title>{{ page.title }}</title>
+    <link href="/stylesheets/bootstrap.min.css" rel="stylesheet">
+    <link href="/stylesheets/blog.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="blog-header">
+      <div class="media container">
+      <div class="media-left">
+        <img src="/images/irfan-fadilah-logo.png" height="70" width="70" class="thumbnail">
+      </div>
+      <div class="media-body">
+        <h1 class="media-heading">Irfan Fadilah's Blog</h1>
+        <p class="lead">Sometimes I Wrote Something, Sometimes I Just Didn't.</p>
+      </div>
+    </div>
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="blog-nav">
+          <a class="blog-nav-item active" href="/">Home</a>
+          <a class="blog-nav-item" href="/archives.html">Archives</a>
+          <a class="blog-nav-item" href="http://www.irfanfadilah.com/" target="_blank">Website</a>
+        </nav>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 blog-main">
+          {{ content }}
+        </div><!-- /.blog-main -->
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+    <footer class="blog-footer">
+      <p>Powered by Jekyll, Template by Bootstrap.</p>
+      <p><a href="http://www.irfanfadilah.com/" target="_blank">Irfan Fadilah</a> © 2015</p>
+    </footer>
+    <script src="/javascripts/jquery.min.js"></script>
+    <script src="/javascripts/bootstrap.min.js"></script>
+  </body>
+</html>

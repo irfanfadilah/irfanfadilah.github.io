@@ -1,1 +1,11 @@
-Welcome to My GitHub Page
+---
+layout: default
+title: Irfan Fadilah's Blog
+---
+{% for post in site.posts %}
+  <h2 class="blog-post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+  <div class="blog-post-content">
+    <p>In publishing and graphic design, lorem ipsum (derived from Latin dolorem ipsum, translated as "pain itself") is a filler text commonly used to demonstrate the graphic elements of a document or visual presentation. Replacing meaningful content with placeholder text allows viewers to focus on graphic aspects such as font, typography, and page layout without being distracted by the content. It also reduces the need for the designer to come up with meaningful text, as they can instead use quickly-generated lorem ipsum.</p>
+  </div>
+  <hr>
+{% endfor %}
