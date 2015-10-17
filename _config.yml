@@ -1,3 +1,3 @@
 timezone: "Asia/Jakarta"
-highlighter: "rouge"
+highlighter: "pygments"
 paginate: 5
