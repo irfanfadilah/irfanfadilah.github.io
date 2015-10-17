@@ -1,15 +1,16 @@
 ---
 layout: default
-title: Archives
+title: Archives -
+description: Archives & Categories
 ---
 <div class="row">
   <div class="col-md-8">
     <h2>Archives</h2>
-    <ol class="list-unstyled">
+    <ul class="list-unstyled">
       {% for post in site.posts %}
         <li><a href="{{ post.url }}">{{ post.title }}</a></li>
       {% endfor %}
-    </ol>
+    </ul>
   </div>
   <div class="col-md-4">
     <h2>Categories</h2>

@@ -1,11 +1,25 @@
 ---
 layout: default
-title: Irfan Fadilah's Blog
+title: Home -
+description: Sometimes I Wrote Something, Sometimes I Just Didn't.
 ---
-{% for post in site.posts %}
+{% for post in paginator.posts %}
   <h2 class="blog-post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+  <span class="blog-post-meta">{{ post.date | date_to_long_string }}</span>
   <div class="blog-post-content">
-    <p>In publishing and graphic design, lorem ipsum (derived from Latin dolorem ipsum, translated as "pain itself") is a filler text commonly used to demonstrate the graphic elements of a document or visual presentation. Replacing meaningful content with placeholder text allows viewers to focus on graphic aspects such as font, typography, and page layout without being distracted by the content. It also reduces the need for the designer to come up with meaningful text, as they can instead use quickly-generated lorem ipsum.</p>
+    <p>{{ post.description }} <a href="{{ post.url }}">Read More</a></p>
   </div>
   <hr>
 {% endfor %}
+
+{% if paginator.total_pages > 1 %}
+  <div class="pagination">
+    {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
+    {% endif %}
+    <span class="page_number">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+    {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+    {% endif %}
+  </div>
+{% endif %}
