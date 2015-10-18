@@ -1,6 +1,8 @@
 timezone: Asia/Jakarta
 highlighter: pygments
+permalink: /:year/:month/:title
 paginate: 10
+paginate_path: /pages/:num
 gems:
   - jemoji
   - jekyll-sitemap

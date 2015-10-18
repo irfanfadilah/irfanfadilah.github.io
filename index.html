@@ -6,7 +6,7 @@ description: Sometimes I Wrote Something, Sometimes I Just Didn't.
 
 {% for post in paginator.posts %}
   <h2 class="blog-post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
-  <span class="blog-post-meta">{{ post.date | date_to_long_string }}</span>
+  <span class="blog-post-meta">{{ post.date | date: "%B %d, %Y" }}</span>
   <div class="blog-post-content">
     <p>{{ post.description }} <a href="{{ post.url }}">Read More</a></p>
   </div>
@@ -16,7 +16,11 @@ description: Sometimes I Wrote Something, Sometimes I Just Didn't.
 {% if paginator.total_pages > 1 %}
   <div class="pagination">
     {% if paginator.previous_page %}
-      <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
+      {% if paginator.previous_page == 1 %}
+        <a href="/" class="previous">Previous</a>
+      {% else %}
+        <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
+      {% endif %}
     {% endif %}
     <span class="page_number">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
     {% if paginator.next_page %}
