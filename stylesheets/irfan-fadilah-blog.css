@@ -108,6 +108,10 @@ h6, .h6 {
   line-height: 1.5;
 }
 
+.blog-page {
+  margin-bottom: 60px;
+}
+
 /* Sidebar modules for boxing content */
 .sidebar-module {
   padding: 15px;

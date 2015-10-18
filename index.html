@@ -1,8 +1,9 @@
 ---
-layout: default
+layout: page
 title: Home -
 description: Sometimes I Wrote Something, Sometimes I Just Didn't.
 ---
+
 {% for post in paginator.posts %}
   <h2 class="blog-post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
   <span class="blog-post-meta">{{ post.date | date_to_long_string }}</span>
