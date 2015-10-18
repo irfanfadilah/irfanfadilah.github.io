@@ -5,8 +5,8 @@ description: Sometimes I Wrote Something, Sometimes I Just Didn't.
 ---
 
 {% for post in paginator.posts %}
-  <h2 class="blog-post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
   <span class="blog-post-meta">{{ post.date | date: "%B %d, %Y" }}</span>
+  <h2 class="blog-post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
   <div class="blog-post-content">
     <p>{{ post.description }} <a href="{{ post.url }}">Read More</a></p>
   </div>

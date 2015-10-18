@@ -4,26 +4,7 @@ title: Archives
 description: Blog Archives & Categories
 ---
 
-<div class="row">
-  <div class="col-md-8">
-    <h2>Archives</h2>
-    <ul class="list-unstyled">
-      {% for post in site.posts %}
-        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-      {% endfor %}
-    </ul>
-  </div>
-  <div class="col-md-4">
-    <h2>Categories</h2>
-    <ul class="list-unstyled">
-      <li>Example</li>
-      <li>Example</li>
-      <li>Example</li>
-      <li>Example</li>
-      <li>Example</li>
-      <li>Example</li>
-      <li>Example</li>
-      <li>Example</li>
-    </ul>
-  </div>
-</div>
+<h2>2015</h2>
+<blockquote>
+  {% include archive.html year="2015" month="October" %}
+</blockquote>
