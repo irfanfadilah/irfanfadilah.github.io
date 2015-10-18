@@ -1,3 +1,7 @@
-timezone: "Asia/Jakarta"
-highlighter: "pygments"
-paginate: 5
+timezone: Asia/Jakarta
+highlighter: pygments
+paginate: 10
+gems:
+  - jemoji
+  - jekyll-sitemap
+  - jekyll-feed

@@ -3,5 +3,7 @@ layout: default
 ---
 <div class="blog-page">
   {{ content }}
-  {% include analytics.html %}
+  {% if jekyll.environment == "production" %}
+    {% include analytics.html %}
+  {% endif %}
 </div>
