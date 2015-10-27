@@ -26,6 +26,11 @@ h6, .h6 {
   font-weight: normal;
 }
 
+blockquote, .help-block {
+  text-align: justify;
+  font-size: 18px;
+}
+
 /*
  * Override Bootstrap's default container.
  */
@@ -161,6 +166,7 @@ h6, .h6 {
 }
 .blog-post-content > p {
   text-align: justify;
+  margin-top: 1em;
   margin-bottom: 1em;
 }
 
