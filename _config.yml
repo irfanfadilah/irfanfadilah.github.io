@@ -4,6 +4,6 @@ permalink: /:year/:month/:title
 paginate: 10
 paginate_path: /pages/:num
 gems:
-  - jemoji
+  - jekyll-paginate
   - jekyll-sitemap
   - jekyll-feed
