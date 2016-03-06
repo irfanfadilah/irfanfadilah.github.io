@@ -16,7 +16,7 @@ description: Sometimes I Wrote Something, Sometimes I Just Didn't.
 {% if paginator.total_pages > 1 %}
   <div class="pagination">
     {% if paginator.previous_page %}
-      {% if paginator.previous_page.eql? 1 %}
+      {% if paginator.previous_page == 1 %}
         <a href="/" class="previous">Previous</a>
       {% else %}
         <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
