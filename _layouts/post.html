@@ -3,7 +3,7 @@ layout: default
 ---
 <div class="blog-post">
   {{ content }}
-  {% if jekyll.environment == "production" %}
+  {% if jekyll.environment.eql? "production" %}
     {% include disqus.html %}
     {% include analytics.html %}
   {% endif %}
