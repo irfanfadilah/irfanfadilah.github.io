@@ -11,6 +11,8 @@
     <title>{{ page.title }} - Irfan Fadilah's Blog</title>
     <meta name="author" content="Irfan Fadilah">
     <meta name="description" content="{{ page.description }}">
+    <meta name="og:description" content="{{ page.description }}">
+    <meta property="og:image" content="{% if page.image != nil %} {{ page.image }} {% else %} {{ "/images/irfan-fadilah-logo.png" }} {% endif %}">
   </head>
   <body>
     <div class="blog-header">
