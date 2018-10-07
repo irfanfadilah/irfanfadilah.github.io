@@ -10,7 +10,9 @@ description: Sometimes I Wrote Something, Sometimes I Just Didn't.
   <div class="blog-post-content">
     <p>{{ post.description }} <a href="{{ post.url }}">Read More</a></p>
   </div>
-  <hr>
+  {% unless post == paginator.posts.last %}
+    <hr>
+  {% endunless %}
 {% endfor %}
 
 {% if paginator.total_pages > 1 %}

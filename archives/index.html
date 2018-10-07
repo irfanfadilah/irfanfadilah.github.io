@@ -4,12 +4,11 @@ title: Archives
 description: Blog Archives &amp; Categories
 ---
 
-<h2>2017</h2>
-<blockquote>
-  {% include archive.html year="2017" month="July" %}
-</blockquote>
-
-<h2>2015</h2>
-<blockquote>
-  {% include archive.html year="2015" month="October" %}
-</blockquote>
+{% for archive in site.data.archives %}
+  <h2>{{ archive.year }}</h2>
+  <blockquote>
+    {% for month in archive.months %}
+      {% include archive.html year=archive.year month=month %}
+    {% endfor %}
+  </blockquote>
+{% endfor %}
