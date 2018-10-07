@@ -22,7 +22,7 @@ image: /images/posts/varnish-cache.png
     300-1000x faster, wow, imagine that speeds. In this post I will cover basic instalation and usage of Varnish based on my experience. Basically any Linux based OS with amd64 architecture are supported, however Ubuntu is more preferable. But please also note that Varnish only support LTS releases of Ubuntu, so we're gonna use 14.04 (Trusty Tahr) LTS. You can use local computer or VPS, the process is not that different though.
   </p>
   <h2>Installation</h2>
-{% highlight bash %}
+{% highlight shell %}
 sudo apt-get install apt-transport-https
 curl https://repo.varnish-cache.org/GPG-key.txt | apt-key add -
 echo "deb https://repo.varnish-cache.org/ubuntu/ trusty varnish-4.1" >> /etc/apt/sources.list.d/varnish-cache.list
@@ -36,7 +36,7 @@ sudo apt-get install varnish
   <p>
     You will see the printed log: "Starting HTTP accelerator varnishd ... done", it's mean Varnish is successfully installed and running. If not, try to run it manually using this command:
   </p>
-{% highlight bash %}
+{% highlight shell %}
 sudo service varnish start
 {% endhighlight %}
   <p>
@@ -45,7 +45,7 @@ sudo service varnish start
   <p>
     Ok, now you get yourself Varnish, let's run your web app as usual, but try to run it on port 8080. In this case I will use a Ruby on Rails application, but you can use any platforms: Sinatra, Node, Meteor, etc.
   </p>
-{% highlight bash %}
+{% highlight shell %}
 rails s -p 8080
 {% endhighlight %}
   <p>
@@ -54,24 +54,24 @@ rails s -p 8080
   <p>
     Well, it's something. But what if you want Varnish to point other port than 8080? Port 3000 for example, the default port for Rails app. You can do it by editing the configuration file, let's get back to our teminal and run:
   </p>
-{% highlight bash %}
+{% highlight shell %}
 sudo nano /etc/varnish/default.vcl
 {% endhighlight %}
   <p>
     <span class="help-block">You can replace <code>nano</code> with your favorite text editor like <code>gedit</code> or something like that.</span> After that, in configuration file you'll see something like this:
   </p>
-<pre>
+{% highlight c %}
 vcl 4.0;
 
 backend default {
   .host = "127.0.0.1";
   .port = "8080";
 }
-</pre>
+{% endhighlight %}
   <p>
     You change the host and port to point to your application, in this case, we will just change the port to "3000". When you done, save it then run this command to restart Varnish:
   </p>
-{% highlight bash %}
+{% highlight shell %}
 sudo service varnish reload
 {% endhighlight %}
   <p>
@@ -86,7 +86,7 @@ sudo service varnish reload
   <p>
     We already have Varnish running with our app, but if we installed it on VPS we may want to place Varnish on port 80. Let's put Varnish on the default HTTP port, 80. First, we need to stop Varnish with <code>sudo service varnish stop</code>. When it's successfully stopped, go to your terminal and fire <code>sudo nano /etc/default/varnish</code> to open Varish config file. You'll see something like:
   </p>
-{% highlight bash %}
+{% highlight shell %}
 DAEMON_OPTS="-a :6081 \
              -T localhost:6082 \
              -f /etc/varnish/default.vcl \
@@ -108,6 +108,6 @@ DAEMON_OPTS="-a :6081 \
     Well, that's all for Varnish. I hope this article will be helpful for you and feel free to ask in comments box below if you have any questions. :)
   </p>
   <em>
-  References: <a href="https://www.varnish-cache.org/" target="_blank">Varnish Official Website</a> &amp; <a href="https://en.wikipedia.org/" target="_blank">Wikipedia</a>
+    References: <a href="https://www.varnish-cache.org/" target="_blank">Varnish Official Website</a> &amp; <a href="https://en.wikipedia.org/" target="_blank">Wikipedia</a>
   </em>
 </div>

@@ -1,8 +1,9 @@
-timezone: Asia/Jakarta
-permalink: /:year/:month/:title/
 paginate: 10
+excerpt_separator: ""
+timezone: Asia/Jakarta
 paginate_path: /pages/:num/
-gems:
+permalink: /:year/:month/:title/
+plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-feed
