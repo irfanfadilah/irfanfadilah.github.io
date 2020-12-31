@@ -27,7 +27,6 @@ h6, .h6 {
 }
 
 blockquote, .help-block {
-  text-align: justify;
   font-size: 18px;
 }
 
@@ -168,7 +167,6 @@ code {
   font-size: 24px;
 }
 .blog-post-content > p {
-  text-align: justify;
   margin-top: 1em;
   margin-bottom: 1em;
 }

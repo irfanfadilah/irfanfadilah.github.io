@@ -4,23 +4,23 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/x-icon" href="https://res.cloudinary.com/irfanfadilah/irfanfadilah/logo_v2">
-    <link rel="apple-touch-icon" type="image/png" href="https://res.cloudinary.com/irfanfadilah/irfanfadilah/logo_v2">
+    <link rel="shortcut icon" type="image/x-icon" href="https://res.cloudinary.com/irfanfadilah/irfanfadilah/logo">
+    <link rel="apple-touch-icon" type="image/png" href="https://res.cloudinary.com/irfanfadilah/irfanfadilah/logo">
     <link href="/stylesheets/bootstrap.min.css" rel="stylesheet">
     <link href="/stylesheets/irfan-fadilah-blog.css" rel="stylesheet">
     <title>{{ page.title }} - Irfan Fadilah's Blog</title>
     <meta name="author" content="Irfan Fadilah">
     <meta name="description" content="{{ page.description }}">
     <meta name="og:description" content="{{ page.description }}">
-    <meta property="og:type" content="{% if page.layout == "post" %} {{ "article" }} {% else %} {{ "website" }} {% endif %}">
-    <meta property="og:image" content="{% if page.image != nil %} {{ page.image }} {% else %} {{ "https://res.cloudinary.com/irfanfadilah/irfanfadilah/preview_v2" }} {% endif %}">
-    <meta property="og:image:secure_url" content="{% if page.image != nil %} {{ page.image }} {% else %} {{ "https://res.cloudinary.com/irfanfadilah/irfanfadilah/preview_v2" }} {% endif %}">
+    <meta property="og:type" content="{% if page.layout == 'post' %} {{ 'article' }} {% else %} {{ 'website' }} {% endif %}">
+    <meta property="og:image" content="{% if page.image != nil %} {{ page.image }} {% else %} {{ 'https://res.cloudinary.com/irfanfadilah/irfanfadilah/preview' }} {% endif %}">
+    <meta property="og:image:secure_url" content="{% if page.image != nil %} {{ page.image }} {% else %} {{ 'https://res.cloudinary.com/irfanfadilah/irfanfadilah/preview' }} {% endif %}">
   </head>
   <body>
     <div class="blog-header">
       <div class="media container">
       <div class="media-left">
-        <img src="https://res.cloudinary.com/irfanfadilah/irfanfadilah/logo_v2" height="70" width="70" class="thumbnail">
+        <img src="https://res.cloudinary.com/irfanfadilah/irfanfadilah/logo" height="70" width="70" class="thumbnail">
       </div>
       <div class="media-body">
         <h1 class="media-heading">Irfan Fadilah's Blog</h1>
